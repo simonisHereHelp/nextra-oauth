@@ -11,7 +11,7 @@ import styles from "./page.module.css";
 export default function Home() {
   const { data: session } = useSession();
 
-  if (session) redirect("/upload");
+  if (session) redirect("doc1.md");
 
   return (
     <>
