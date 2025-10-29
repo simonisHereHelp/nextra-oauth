@@ -1,4 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+// next.config.js
+const withNextra = require('nextra')({
+  theme: 'nextra-theme-docs',
+});
 
-module.exports = nextConfig
+module.exports = withNextra({
+  reactStrictMode: true,
+
+  async redirects() {
+    return [
+      { source: '/', destination: '/_page', permanent: false },
+    ];
+  },
+});
